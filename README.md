@@ -24,7 +24,7 @@ go to /admin directory then enter following username and password admin:password
     python manage.py createsuperuser
     
 
-### Now the webpage is ready to go you can manage database through admin panel and make changes is html code will reflect the changes by a simple refresh. Django is used for backend purposes.
+### Now the webpage is ready to go you can manage database through admin panel and make changes is html code will reflect the changes by a simple refresh.
 
 # Credit 
 
