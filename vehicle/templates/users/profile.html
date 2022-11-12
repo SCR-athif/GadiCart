@@ -1,0 +1,14 @@
+
+{% extends 'users/base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+    <div class="container">
+        <br>
+        <br>
+
+        <h2>Name: <font face="elegent">{{user.username}}</font></h2>
+        <h2>Mail id: <font face="elegent">{{user.email}}</font></h2>
+    </div>
+{% endblock %}

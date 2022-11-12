@@ -1,0 +1,23 @@
+{% extends 'users/base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'users/css/check.css' %}">
+    <br>
+    <br>
+    <div id="container">
+        <img src="{{vehicle.Image.url}}" height="400px" width="400px">
+        <br>
+        <p id="body-paragraph">
+            {{vehicle.Title}}<br>
+
+            Brand : {{vehicle.Brand}}<br>
+            Year  : {{vehicle.year}}<br>
+            Price : {{vehicle.Price}}<br>
+            Contact : {{vehicle.Phone}}, {{vehicle.Email}}<br>
+            Details : {{vehicle.Description}}<br><br>
+        </p>
+    </div>
+
+    <p>Posted on : {{vehicle.Date}}</p>
+<input type=button value="Go Back" onClick="javascript:history.go(-1);" style="color: white; background-color: #fd5e14;" class="btn" id="body-link-row">
+{% endblock content %}

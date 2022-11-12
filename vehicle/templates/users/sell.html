@@ -1,0 +1,14 @@
+{% extends 'users/base.html' %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" href="{% static 'users/css/main.css' %}" type="text/css">
+        <div style="text-align:center;">
+            <br><br><br><br><br><br>
+            <p id="header-paragraph">Select category of vehicle </p><br>
+            <a class="btn" style="color: white; background-color: #fd5e14;"type="submit" id="body-link-row" href="{% url 'car' %}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Car &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a><br><br>
+            <a class="btn" style="color: white; background-color: #fd5e14;"type="submit" id="body-link-row" href="{% url 'bike' %}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bike &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a><br><br>
+            <a class="btn" style="color: white; background-color: #fd5e14;"type="submit" id="body-link-row" href="{% url 'other' %}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Other &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a><br><br>
+        </div>
+
+
+{% endblock content %}

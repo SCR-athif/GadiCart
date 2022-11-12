@@ -1,0 +1,18 @@
+#container{
+display:flex;
+}
+#container img{
+margin-right:20px;
+}
+#header-paragraph{
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 20px;
+  padding-left: 50px;
+}
+#body-paragraph{
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 20px;
+  padding-left: 50px;
+}

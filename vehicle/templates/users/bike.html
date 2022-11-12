@@ -1,0 +1,20 @@
+{% extends 'users/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'users/css/main.css' %}">
+    <div class="container" style="margin-top: 30px;">
+    <form action="" method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      <fieldset class="form-group">
+          <legend class="border-bottom mb-4" style="color: white;">Add details of your bike </legend>
+          {{ form|crispy }}
+      </fieldset>
+        <br>
+        <br>
+      <div class="form-group" id="signup-button">
+          <button class="btn "type="submit" >Sell your Bike</button>
+      </div>
+    </form>
+    </div>
+{% endblock content %}

@@ -1,0 +1,45 @@
+{% extends 'users/base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href=
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity=
+"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+    <div class="container-fluid p-0 m-0
+                align-items-center
+                justify-content-center d-flex"
+            style="min-height: 100vh;">
+
+        <!-- Row for the card-->
+        <div class="row w-100 p-0 w-0">
+            {% for vehicle in vehicle %}
+            <!-- Column for card-->
+            <div class="col-lg-3 mb-2">
+                <div class="card mx-auto" style="width:14rem;">
+                    <img class="card-img-top" src="{{vehicle.Image.url}}" height="250px" widht="300px"
+                                alt="Card image cap">
+
+                    <div class="card-body" style="background:black; height: 250px;" >
+                        <h5 class="card-title">
+                            <br>{{vehicle.Title}}
+                        </h5>
+                         <p class="card-text" style="color:#FF00FF">
+                            <font color="white">year:</font> {{vehicle.year}}
+                        </p>
+                        <p class="card-text" style="color:#00FFFF">
+                            <font color="white">Price:</font> {{vehicle.Price}}
+                        </p>
+
+                        <a href="{{vehicle.ID}}" class="btn btn-success" style="  position: absolute; bottom: 8px; left: 16px; color: white; background-color: #fd5e14;"id="body-link-row">
+                            More
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+                   {%endfor%}
+        </div>
+    </div>
+{% endblock content %}

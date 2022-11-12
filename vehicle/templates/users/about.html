@@ -1,0 +1,16 @@
+{% extends 'users/base.html' %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" href="{% static 'users/css/main.css' %}">
+    <div class="container">
+            <div class="row g-0">
+                <div class="col-sm-6 col-md-8" id="header-text">
+                  <h1 id="header-h1">GadiCart</h1>
+                  <p id="header-paragraph">A trusted destination for all second hand vehicle sellers and buyers, <br> This website is developed for who dream for an own vehicle but don't have money to buy it.<br> Here we provide you guys to sell your vehicle with a satisfying price and those who want cheap priced bikes, cars. <br> <br>Highlight of our company is to remove middle man agent and avoid the high commission</p>
+                    {% if user.is_authenticated %}
+                  <a class="btn" style="color: white; background-color: #fd5e14;"type="submit" id="body-link-row" href="{% url 'sell' %}">Sell Your Vehicle</a>
+                    {%endif%}
+                </div>
+              </div>
+    </div>
+{% endblock content %}
